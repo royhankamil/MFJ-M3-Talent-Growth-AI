@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/royhankamil/MFJ-M3-Talent-Growth-AI/blob/main/Web/Asset/Logo/Logo_NoGlow.png" width="158" height="79">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWY2ZXRoZjRvZGxuc2lvem9peTZpbGh2Mm1zYXRrdG10YmV4eDlmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/mKwpC86qm5QCLTPbYN/giphy.gif" width="250" height="159">
   <h1>MFJ-M3 Talent Growth AI</h1>
 </div>
 
