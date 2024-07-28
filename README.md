@@ -5,6 +5,8 @@
 
 # MFJ-M3 Talent Growth AI
 
-This application will help people's talent growth, especially those who have no vision about their future with the help of Artificiall Intelligence. This project was initially created to participate in COMPFEST AI Competition themed "Talent Growth" under BEM Fasilkom UI.
+Welcome to the Talent Growth AI Application repository, developed as part of the COMPFEST AI Competition under the theme "Talent Growth" by BEM Fasilkom UI.
 
-The idea is that when people finished their education but having no skill to continue their life. Is it too late? Big no!
+## Overview
+
+The Talent Growth AI Application aims to empower individuals who have completed their education but lack direction in their carreer and skill development. Leveraging Artificial Intelligence, this project provides personalized guidance and recommendations to help users discover and enhance their talent, regardless of their current stage in life.
