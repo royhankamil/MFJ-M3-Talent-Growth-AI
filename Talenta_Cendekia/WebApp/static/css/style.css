@@ -8,7 +8,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scrolling */
+    overflow: hidden; /* Disable scrolling */
     box-sizing: border-box;
 }
 
@@ -16,48 +16,52 @@ body {
     background-image: url("../images/background/bg.png");
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top; /* Ensure the background is positioned at the top */
     background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
 }
 
-.parallax {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: url("../images/background/bg.png") no-repeat center center fixed;
-    background-size: cover;
-    transform: translateZ(-1px) scale(2);
-    pointer-events: none;
-    transition: transform 2s ease-out;
+.perspective {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure it takes up the full viewport height */
 }
 
 .container {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
     width: 100%;
     position: relative;
     z-index: 1;
-    transition: transform 2s ease-out; /* Add this for the zoom-out effect */
+    transition: transform 2s ease-out;
 }
 
 .logo {
-    width: 305px;
+    width: 250px; /* Adjust the logo size */
     margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
+    margin-top: -60px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     transform-origin: center;
     perspective: 1000px;
+    pointer-events: auto; /* Ensure logo is hoverable */
+    user-select: none; /* Disable text selection */
 }
+
+.logo:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
 .title {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Adjust the title size */
     margin: 0;
     font-weight: normal;
     background: linear-gradient(-45deg, #8946BF 40%, #89B4B0 60%);
@@ -69,27 +73,18 @@ body {
     font-family: 'JostRegular';
     letter-spacing: 4px;
     position: relative;
-    animation: dazzle 1s infinite; /* Dazzle effect on the title */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    pointer-events: auto; /* Ensure title is hoverable */
+    user-select: none; /* Disable text selection */
 }
 
-.title::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: linear-gradient(-45deg, #8946BF 40%, #89B4B0 60%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 5px rgba(137, 70, 191, 0.25), 0 0 10px rgba(137, 70, 191, 0.25), 0 0 15px rgba(137, 70, 191, 0.25), 0 0 20px rgba(137, 180, 176, 0.25), 0 0 30px rgba(137, 180, 176, 0.25), 0 0 40px rgba(137, 180, 176, 0.25), 0 0 50px rgba(137, 180, 176, 0.25);
-    animation: glow 2s infinite alternate;
+.title:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Adjust the tagline size */
     margin-top: 0px;
     background: linear-gradient(30deg, #E2F3F5 40%, #848E8F 60%);
     -webkit-background-clip: text;
@@ -97,6 +92,14 @@ body {
     color: transparent;
     font-family: 'JostRegular';
     letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    pointer-events: auto; /* Ensure tagline is hoverable */
+    user-select: none; /* Disable text selection */
+}
+
+.tagline:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
 }
 
 @keyframes glow {
@@ -106,38 +109,4 @@ body {
     to {
         text-shadow: 0 0 10px rgba(137, 70, 191, 0.25), 0 0 20px rgba(137, 70, 191, 0.25), 0 0 30px rgba(137, 70, 191, 0.25), 0 0 40px rgba(137, 180, 176, 0.25), 0 0 50px rgba(137, 180, 176, 0.25), 0 0 60px rgba(137, 180, 176, 0.25), 0 0 70px rgba(137, 180, 176, 0.25);
     }
-}
-
-@keyframes zoomOut {
-    from {
-        background-size: 100%;
-    }
-    to {
-        background-size: 110%;
-    }
-}
-
-@keyframes dazzle {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
-
-.mouse-glow {
-    position: fixed;
-    pointer-events: none;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: rgba(137, 180, 176, 0.5);
-    transform: translate(-50%, -50%);
-    transition: background 0.2s, transform 0.2s;
-    filter: blur(10px); /* Blur effect */
-}
-
-.logo:hover {
-    transform: scale(1.1) rotateY(20deg); /* Add a parallax effect on hover */
 }

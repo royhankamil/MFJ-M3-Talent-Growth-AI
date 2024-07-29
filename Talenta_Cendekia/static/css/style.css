@@ -41,7 +41,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
-    transition: transform 2s ease-out;
+    /* Removed transition here since Anime.js handles the animation */
 }
 
 .logo {
