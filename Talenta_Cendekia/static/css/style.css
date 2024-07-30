@@ -41,23 +41,23 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
+    margin-top: 50px;
     /* Removed transition here since Anime.js handles the animation */
 }
 
 .logo {
     width: 250px; /* Adjust the logo size */
     margin-bottom: 10px;
-    margin-top: -60px;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     transform-origin: center;
     perspective: 1000px;
     pointer-events: auto; /* Ensure logo is hoverable */
     user-select: none; /* Disable text selection */
+    filter: brightness(1.5);
 }
 
 .logo:hover {
-    transform: scale(1.2);
-    filter: brightness(1.5);
+    filter: brightness(1.7);
 }
 
 .title {
@@ -79,7 +79,6 @@ body {
 }
 
 .title:hover {
-    transform: scale(1.2);
     filter: brightness(1.5);
 }
 
@@ -98,7 +97,6 @@ body {
 }
 
 .tagline:hover {
-    transform: scale(1.2);
     filter: brightness(1.5);
 }
 

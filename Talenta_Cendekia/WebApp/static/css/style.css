@@ -41,7 +41,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
-    transition: transform 2s ease-out;
+    /* Removed transition here since Anime.js handles the animation */
 }
 
 .logo {
@@ -53,11 +53,11 @@ body {
     perspective: 1000px;
     pointer-events: auto; /* Ensure logo is hoverable */
     user-select: none; /* Disable text selection */
+    filter: brightness(1.5);
 }
 
 .logo:hover {
-    transform: scale(1.2);
-    filter: brightness(1.5);
+    filter: brightness(1.7);
 }
 
 .title {
