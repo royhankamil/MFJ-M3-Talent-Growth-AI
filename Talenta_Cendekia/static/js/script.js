@@ -1,21 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log('DOM fully loaded and parsed'); // Debugging
-
+document.addEventListener('DOMContentLoaded', function() {
     anime({
-        targets: '.container',
-        translateY: [204, 0], // Move from 204px down to its original position
-        easing: 'easeInOutQuad', // Smooth easing function
-        duration: 2000 // Animation duration in milliseconds
-    }).finished.then(() => {
-        console.log('Animation finished'); // Debugging
+        targets: '.batik-pattern',
+        translate: ['120%', '100%'],
+        rotate: ['-10deg', '0deg'],
+        opacity : ['0.0', '1.0'],
+        filter: ['blur(20px)', 'blur(0px)'],
+        duration: 2000,
+        easing: 'easeInOutCubic',
     });
-});
-
-document.addEventListener("DOMContentLoaded", () =>{
     anime({
-        targets:'.container',
-        opacity: [0, 1],
-        duration: 6000
+        targets: '#upper',
+        duration: 2000,
+        translateX: ['-40%', '0%'],
+        opacity: ['0', '1'],
+        easing: 'easeInOutCubic'
     })
-
+    anime({
+        targets: '#lower',
+        duration: 2000,
+        translateX: ['-60%', '0%'],
+        opacity: ['0', '1'],
+        easing: 'easeInOutCubic'
+    })
 });

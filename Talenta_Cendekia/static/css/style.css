@@ -1,110 +1,62 @@
 @font-face {
-    font-family: JostRegular;
-    src: url("../font/Jost-Medium.ttf");
+    font-family: batik;
+    src: url("../font/Batik-Worldwide.otf");
 }
 
-html, body {
+@font-face{
+    font-family: jost;
+    src: url('../font/Jost-Regular.ttf');
+}
+
+html, body{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Disable scrolling */
+    overflow: hidden;
     box-sizing: border-box;
+    position: relative;
 }
 
 body {
-    background-image: url("../images/background/bg.png");
+    background-color: hsl(0, 0, 96);
     background-size: cover;
     background-attachment: fixed;
-    background-position: top; /* Ensure the background is positioned at the top */
+    background-position: top;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-}
-
-.perspective {
-    position: relative;
-    text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensure it takes up the full viewport height */
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    margin-top: 50px;
-    /* Removed transition here since Anime.js handles the animation */
+.batik-pattern {
+    position: absolute;
+    transform: translate(90%);
+    object-fit: cover;
+    filter: blur(20px);
+    shape-rendering: geometricPrecision;
 }
 
-.logo {
-    width: 250px; /* Adjust the logo size */
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    transform-origin: center;
-    perspective: 1000px;
-    pointer-events: auto; /* Ensure logo is hoverable */
-    user-select: none; /* Disable text selection */
-    filter: brightness(1.5);
+#upper{
+    font-family: 'jost';
+    font-size: 62px;
+    color: hsl(200, 19%, 18%);
 }
 
-.logo:hover {
-    filter: brightness(1.7);
-}
-
-.title {
-    font-size: 2.5em; /* Adjust the title size */
-    margin: 0;
-    font-weight: normal;
-    background: linear-gradient(-45deg, #8946BF 40%, #89B4B0 60%);
+#lower{
+    background: linear-gradient(-45deg, hsl(5, 100%, 67%), hsl(200, 19%, 18%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: 0.1em;
-    font-family: 'JostRegular';
-    letter-spacing: 4px;
-    position: relative;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    pointer-events: auto; /* Ensure title is hoverable */
-    user-select: none; /* Disable text selection */
+    font-size: 157px;
+    font-family: 'batik';
+    font-weight: 5;
+    margin-top: -20px;
 }
 
-.title:hover {
-    filter: brightness(1.5);
-}
-
-.tagline {
-    font-size: 1.2em; /* Adjust the tagline size */
-    margin-top: 0px;
-    background: linear-gradient(30deg, #E2F3F5 40%, #848E8F 60%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: 'JostRegular';
-    letter-spacing: 2px;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    pointer-events: auto; /* Ensure tagline is hoverable */
-    user-select: none; /* Disable text selection */
-}
-
-.tagline:hover {
-    filter: brightness(1.5);
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px rgba(137, 70, 191, 0.25), 0 0 10px rgba(137, 70, 191, 0.25), 0 0 15px rgba(137, 70, 191, 0.25), 0 0 20px rgba(137, 180, 176, 0.25), 0 0 30px rgba(137, 180, 176, 0.25), 0 0 40px rgba(137, 180, 176, 0.25), 0 0 50px rgba(137, 180, 176, 0.25);
-    }
-    to {
-        text-shadow: 0 0 10px rgba(137, 70, 191, 0.25), 0 0 20px rgba(137, 70, 191, 0.25), 0 0 30px rgba(137, 70, 191, 0.25), 0 0 40px rgba(137, 180, 176, 0.25), 0 0 50px rgba(137, 180, 176, 0.25), 0 0 60px rgba(137, 180, 176, 0.25), 0 0 70px rgba(137, 180, 176, 0.25);
-    }
+.tagline{
+    position: absolute;
+    left: 5%;
+    text-align: left;
+    margin: 2rem;
 }
