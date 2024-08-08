@@ -10,14 +10,23 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <div class="title">
+        <div class="logo-container">
+            <div class="trail"></div>
+            <div class="container">
+                <img src="{% static 'images/logo/Logo.png' %}" alt="logo">
+            </div>
+        </div>
+        <span>Talenta Cendekia</span>
+    </div>
     <span class="batik-pattern">
         <img src="{% static 'images/background/batikVector.svg' %}" alt="Batik Pattern" id="batik">
     </span>
     <div class="tagline">
         <div id="upper">Bersatu Dengan</div>
         <div id="lower">Ambisi</div>
+        <img src="{% static '/images/pattern_tagline.svg' %}" alt="pattern" id="tgpattern">
     </div>
-
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
