@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talenta Cendekia</title>
+    <title>Talenta Nusantara</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 </head>
 <body>
-    <div class="title">
-        <div class="logo-container">
-            <div class="trail"></div>
-            <div class="container">
-                <img src="{% static 'images/logo/Logo.png' %}" alt="logo">
+    <section id="Home">
+        <div class="title">
+            <div class="logo-container">
+                <div class="trail"></div>
+                <div class="container">
+                    <img src="{% static 'images/logo/Logo.png' %}" alt="logo">
+                </div>
             </div>
+            <span>Talenta Nusantara</span>
         </div>
-        <span>Talenta Cendekia</span>
-    </div>
-    <span class="batik-pattern">
-        <img src="{% static 'images/background/batikVector.svg' %}" alt="Batik Pattern" id="batik">
-    </span>
-    <div class="tagline">
-        <div id="upper">Bersatu Dengan</div>
-        <div id="lower">Ambisi</div>
-        <img src="{% static '/images/pattern_tagline.svg' %}" alt="pattern" id="tgpattern">
-    </div>
+    
+        <span class="batik-pattern">
+            <img src="{% static 'images/background/batik.png' %}" alt="Batik Pattern" id="batik">
+        </span>
+    
+    
+        <div class=""></div>
+        <div class="tagline">
+            <div id="upper">Bersatu Dengan</div>
+            <div id="lower">Ambisi</div>
+            <img src="{% static 'images/pattern_tagline.svg' %}" alt="pattern" id="tgpattern">
+        </div>
+    
+        <span class="scroll-text"></span>
+    
+    </section>
+
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
