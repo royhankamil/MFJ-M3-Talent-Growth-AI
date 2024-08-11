@@ -17,13 +17,12 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 2500px;
+    height: 1800px;
     overflow: hidden; /* Lenis will handle scroll */
     max-width: 100%;
     box-sizing: border-box;
     position: relative;
 }
-
 
 body {
     background-color: hsl(0, 0, 96);
@@ -76,7 +75,7 @@ body {
     margin-top: -20px;
 }
 
-.batik{
+.batik {
     transition: ease-in-out 1s;
 }
 
@@ -96,7 +95,7 @@ body {
 
 #tgpattern {
     position: absolute;
-    left:95%;
+    left: 95%;
     top: 75%;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -127,9 +126,12 @@ body {
     font-size: 32px;
     text-align: center;
     left: -65px;
-    background: linear-gradient(45deg, hsl(20, 66%, 69%), hsl(0, 93%, 69%));
+    background: linear-gradient(45deg, hsl(20, 66%, 69%), hsl(0, 93%, 69%), hsl(20, 66%, 69%));
+    background-size: 300% 300%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -139,6 +141,20 @@ body {
     -webkit-user-drag: none;
     pointer-events: none;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 
 .logo-container {
     display: flex;
@@ -161,7 +177,6 @@ body {
     height: 95px;
     width: 95px;
     background-color: hsl(21, 100%, 85%);
-    
 }
 
 .container {
@@ -181,4 +196,220 @@ body {
     user-select: none;
     -webkit-user-drag: none;
     pointer-events: none;
+}
+
+.chart-illustration{
+    position: relative;
+    right: 12vh;
+}
+
+.gear{
+    position: relative;
+    top: 16vh;
+    right: 16vh;
+}
+
+#gear-1{
+    position: relative;
+    bottom: 2vh;
+    left: 2vh;
+}
+
+#gear-2{
+    position: relative;
+    left: 4vh;
+    top: 2vh;
+}
+
+#gear-3{
+    position: relative;
+    top: 15vh;
+    right: 19vh;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .batik-pattern {
+        transform: translate(50%);
+        right: 300px;
+    }
+    
+    #lower {
+        font-size: 120px;
+    }
+    
+    #upper {
+        font-size: 50px;
+    }
+
+    .tagline {
+        left: 5%;
+        top: 250px;
+    }
+
+    .title span {
+        font-size: 28px;
+        left: -50px;
+    }
+}
+
+.form-register{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    left: 100px;
+}
+
+.form-heading{
+    margin-bottom: 120px;
+}
+
+#form-heading-1{
+    font-family: 'jost';
+    font-size: 42px;
+    color: #7B7B7B;
+}
+
+#form-heading-2{
+    font-family: 'jost-medium';
+    font-size: 60px;
+    color: #7B7B7B;
+}
+@media screen and (max-width: 768px) {
+    .batik-pattern {
+        transform: translate(30%);
+        right: 200px;
+    }
+
+    #lower {
+        font-size: 90px;
+    }
+
+    #upper {
+        font-size: 40px;
+    }
+
+    .tagline {
+        left: 4%;
+        top: 200px;
+    }
+
+    .title span {
+        font-size: 24px;
+        left: -40px;
+    }
+    
+    .container img {
+        width: 45px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .batik-pattern {
+        transform: translate(10%);
+        right: 100px;
+    }
+
+    #lower {
+        font-size: 70px;
+    }
+
+    #upper {
+        font-size: 30px;
+    }
+
+    .tagline {
+        left: 3%;
+        top: 150px;
+    }
+
+    .title span {
+        font-size: 20px;
+        left: -30px;
+    }
+
+    .container img {
+        width: 35px;
+    }
+}
+
+
+.autocomplete-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px; /* Add space between each autocomplete container */
+}
+
+.autocomplete-input {
+    font-family: 'jost';
+    font-size: 24px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid #7B7B7B;   
+    width: 280px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.active {
+    background-color: #ddd;
+}
+
+#Form{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: 800px;
+}
+
+#nama-input {
+    width: 280px;
+    font-family: 'jost';
+    font-size: 24px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid #7B7B7B;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.profesi{
+    margin-right: 24px;
+}
+
+#nama-input{
+    margin-right: 24px;
+    margin-bottom: 48px;
+}
+
+.bottom-tagline{
+    position: absolute;
+    left: 40px;
+}
+
+#tagline-1{
+    font-family: 'jost-medium';
+    font-size: 35px;
+}
+#tagline-2{
+    font-family: 'jost';
+    font-size: 18px;
 }

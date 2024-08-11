@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 </head>
 <body>
-    <section id="Home">
+    <section id="header">
         <div class="title">
             <div class="logo-container">
                 <div class="trail"></div>
@@ -22,24 +22,63 @@
                 </div>
             </div>
             <span>Talenta Nusantara</span>
-        </div>
-    
+        </div>    
+    </section>
+
+    <div class="scrollbar"></div>
+
+    <section id="Home">
         <span class="batik-pattern">
             <img src="{% static 'images/background/batik.png' %}" alt="Batik Pattern" id="batik">
         </span>
-    
-    
         <div class=""></div>
         <div class="tagline">
             <div id="upper">Bersatu Dengan</div>
             <div id="lower">Ambisi</div>
             <img src="{% static 'images/pattern_tagline.svg' %}" alt="pattern" id="tgpattern">
         </div>
-    
-        <span class="scroll-text"></span>
-    
+        <div class="bottom-tagline">
+            <div id="tagline-1">/ Sarana Pengembangan</div>
+            <div id="tagline-2">Generasi Emas Nusantara</div>
+        </div>
     </section>
 
+    <section id="Form">
+        <div class="chart-illustration">
+            <div class="gear">
+                <img src="{% static 'images/form-home/gear-1.png'%}" alt="gear1" id="gear-1">
+                <img src="{% static 'images/form-home/gear-2.png'%}" alt="gear2" id="gear-2">
+                <img src="{% static 'images/form-home/gear-3.png'%}" alt="gear3" id="gear-3">
+            </div>
+            <img src="{% static 'images/form-home/man-chart.png'%}" alt="chart" class="chart-illustration">
+        </div>
+
+        <div class="form-register">
+            <div class="form-heading">
+                <div id="form-heading-1">Untuk Lebih Mengetahui</div>
+                <div id="form-heading-2">Dirimu</div>
+            </div>
+
+            <div class="form-input">
+                <input type="text" id="nama-input" placeholder="Nama Kamu">
+                <div class="autocomplete-container impian">
+                    <input id="impian-input" class="autocomplete-input" type="text" placeholder="Search Impian...">
+                    <div id="impian-items" class="autocomplete-items"></div>
+                </div>
+    
+                <div class="autocomplete-container profesi">
+                    <input id="profesi-input" class="autocomplete-input" type="text" placeholder="Search Profesi...">
+                    <div id="profesi-items" class="autocomplete-items"></div>
+                </div>
+    
+                <div class="autocomplete-container pendidikan">
+                    <input id="pendidikan-input" class="autocomplete-input" type="text" placeholder="Search Pendidikan Terakhir...">
+                    <div id="pendidikan-items" class="autocomplete-items"></div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
