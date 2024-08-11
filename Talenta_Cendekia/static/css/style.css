@@ -38,7 +38,7 @@ body {
 .batik-pattern {
     top: 0px;
     right: 400px;
-    position: absolute;
+    position: fixed;
     transform: translate(90%);
     object-fit: cover;
     filter: blur(20px);
@@ -80,7 +80,7 @@ body {
 }
 
 .tagline {
-    position: absolute;
+    position: fixed;
     top: 300px;
     left: 8%;
     text-align: left;
@@ -200,7 +200,7 @@ body {
 
 .chart-illustration{
     position: relative;
-    right: 12vh;
+    right: 10vh;
 }
 
 .gear{
@@ -260,7 +260,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    left: 100px;
+    left: 200px;
 }
 
 .form-heading{
@@ -374,10 +374,11 @@ body {
 }
 
 #Form{
+    position: fixed;
     display: flex;
     align-content: center;
     align-items: center;
-    margin-top: 800px;
+    margin-top: -900px;
 }
 
 #nama-input {
@@ -401,8 +402,32 @@ body {
 }
 
 .bottom-tagline{
-    position: absolute;
+    position: fixed;
     left: 40px;
+    bottom: 20px;
+}
+
+.scrollbar{
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 285px;
+    width: 11px;
+    border-radius: 20px;
+    background: #D9D9D9;
+}
+
+.scrollbar div{
+    position: relative;
+    width: 11px;
+    background: #656565;
+    border-radius: 20px;
+}
+
+#guide{
+    position: fixed;
+    font-family: 'jost';
 }
 
 #tagline-1{
@@ -410,6 +435,8 @@ body {
     font-size: 35px;
 }
 #tagline-2{
-    font-family: 'jost';
+    font-family: 'jost-medium';
     font-size: 18px;
+    margin-left: 30px;
+    color: #646464;
 }

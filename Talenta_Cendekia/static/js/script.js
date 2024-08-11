@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         easing: 'easeInOutCubic'
     });
 
+    const bar = document.querySelector('.scrollbar-value');
+    bar.style.height = `${142.5}px`;
+
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
@@ -48,11 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(window.scrollY)
 
         anime({
+            targets: '.scrollbar div',
+            top: `${scrollValue*142.5}px`,
+            duration: 0,
+            easing: 'easeOutCubic',
+        })
+
+        anime({
             targets: batik,
-            rotate: scrollValue * -150,
+            //rotate: scrollValue * -150,
             opacity: 1 - (scrollValue * 2),
             translateX: scrollValue * 2000,
-            filter: `blur(${scrollValue * 40}px)`,
+            //filter: `blur(${scrollValue * 40}px)`,
             easing: 'easeOutCubic',
             duration: 0,
         });
