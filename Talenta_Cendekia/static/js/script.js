@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const bar = document.querySelector('.scrollbar-value');
     bar.style.height = `${142.5}px`;
+    document.querySelector('#Form').style.opacity = 0;
 
     const lenis = new Lenis({
         duration: 1.2,
